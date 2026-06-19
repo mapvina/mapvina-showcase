@@ -102,6 +102,20 @@ const screenshots = [
     desc: 'Hillshade terrain layer (Mapterhorn) hiển thị địa hình 3D trên bản đồ React Native.',
     repo: 'https://github.com/mapvina/mapvina-document-reactnative-github'
   },
+  {
+    file: 'screenshots/react-native/rn-android-map-twomaps.png',
+    platform: 'react-native',
+    title: 'MapVina React Native — Two Maps',
+    desc: 'Hiển thị hai bản đồ song song trong cùng một màn hình React Native.',
+    repo: 'https://github.com/mapvina/mapvina-document-reactnative-github'
+  },
+  {
+    file: 'screenshots/react-native/rn-android-map-ornaments.png',
+    platform: 'react-native',
+    title: 'MapVina React Native — Map Ornaments',
+    desc: 'Bản đồ với scale bar, compass, attribution và các UI ornaments tùy chỉnh.',
+    repo: 'https://github.com/mapvina/mapvina-document-reactnative-github'
+  },
   // Flutter — placeholder
   {
     file: 'screenshots/flutter/flutter-map-coming-soon.png',
