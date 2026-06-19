@@ -28,21 +28,21 @@ const screenshots = [
     file: 'screenshots/ios/ios-map-basic.png',
     platform: 'ios',
     title: 'MapVina iOS — Basic Map',
-    desc: 'Render bản đồ vector mượt mà trên iOS Simulator (iPhone 15 Pro, iOS 17).',
+    desc: 'Bản đồ cơ bản hiển thị mượt mà trên iOS Simulator (iPhone 17, iOS 26).',
     repo: 'https://github.com/mapvina/mapvina-document-ios-github'
   },
   {
     file: 'screenshots/ios/ios-map-location.png',
     platform: 'ios',
     title: 'MapVina iOS — Location & GPS',
-    desc: 'Theo dõi vị trí real-time với GPS marker trên iOS Simulator.',
+    desc: 'Theo dõi vị trí real-time với GPS marker trên iOS Simulator (iPhone 17).',
     repo: 'https://github.com/mapvina/mapvina-document-ios-github'
   },
   {
     file: 'screenshots/ios/ios-map-annotations.png',
     platform: 'ios',
     title: 'MapVina iOS — Custom Annotations',
-    desc: 'Hiển thị custom annotations và markers trên bản đồ iOS.',
+    desc: 'Hiển thị custom annotations và markers trên bản đồ iOS Simulator (iPhone 17).',
     repo: 'https://github.com/mapvina/mapvina-document-ios-github'
   },
   {
