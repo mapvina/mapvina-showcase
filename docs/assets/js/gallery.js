@@ -66,40 +66,40 @@ const screenshots = [
     desc: 'Bản đồ với region đã cố định, hiển thị địa danh rõ ràng.',
     repo: 'https://github.com/mapvina/mapvina-document-ios-github'
   },
-  // React Native
+  // React Native (Android emulator — real screenshots)
   {
-    file: 'screenshots/react-native/rn-map-basic.png',
+    file: 'screenshots/react-native/rn-android-map-basic.png',
     platform: 'react-native',
     title: 'MapVina React Native — Basic Map',
-    desc: 'Bản đồ tương tác trong React Native với markers và custom styles.',
+    desc: 'Bản đồ tương tác trong React Native chạy trên Android emulator (Pixel 9 Pro XL, API 35).',
     repo: 'https://github.com/mapvina/mapvina-document-reactnative-github'
   },
   {
-    file: 'screenshots/react-native/rn-map-location.png',
+    file: 'screenshots/react-native/rn-android-map-texture.png',
     platform: 'react-native',
-    title: 'MapVina React Native — Location & GPS',
-    desc: 'Theo dõi vị trí người dùng real-time trong React Native app.',
+    title: 'MapVina React Native — Texture View',
+    desc: 'MapView với androidView="texture" mode hiển thị bản đồ mượt mà trên Android.',
     repo: 'https://github.com/mapvina/mapvina-document-reactnative-github'
   },
   {
-    file: 'screenshots/react-native/rn-map-heatmap.png',
+    file: 'screenshots/react-native/rn-android-map-camera.png',
     platform: 'react-native',
-    title: 'MapVina React Native — Heatmap Layer',
-    desc: 'Hiển thị heatmap layer với dữ liệu density trên React Native.',
+    title: 'MapVina React Native — Camera FlyTo',
+    desc: 'Camera controls với flyTo animation, zoom và bearing trên bản đồ React Native.',
     repo: 'https://github.com/mapvina/mapvina-document-reactnative-github'
   },
   {
-    file: 'screenshots/react-native/rn-map-clustering.png',
+    file: 'screenshots/react-native/rn-android-map-location.png',
     platform: 'react-native',
-    title: 'MapVina React Native — Clustering',
-    desc: 'Dynamic clustering với nhiều điểm dữ liệu trên bản đồ React Native.',
+    title: 'MapVina React Native — User Location',
+    desc: 'Theo dõi vị trí người dùng real-time với location indicator trên Android.',
     repo: 'https://github.com/mapvina/mapvina-document-reactnative-github'
   },
   {
-    file: 'screenshots/react-native/rn-map-search.png',
+    file: 'screenshots/react-native/rn-android-map-hillshade.png',
     platform: 'react-native',
-    title: 'MapVina React Native — Search & Geocoding',
-    desc: 'Tìm kiếm địa điểm với autocomplete trên bản đồ React Native.',
+    title: 'MapVina React Native — Hillshade Layer',
+    desc: 'Hillshade terrain layer (Mapterhorn) hiển thị địa hình 3D trên bản đồ React Native.',
     repo: 'https://github.com/mapvina/mapvina-document-reactnative-github'
   },
   // Flutter — placeholder
