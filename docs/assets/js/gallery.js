@@ -87,6 +87,14 @@ const screenshots = [
     title: 'MapVina React Native — Search & Geocoding',
     desc: 'Tìm kiếm địa điểm với autocomplete trên bản đồ React Native.',
     repo: 'https://github.com/mapvina/mapvina-document-reactnative-github'
+  },
+  // Flutter — placeholder
+  {
+    file: 'screenshots/flutter/flutter-map-coming-soon.png',
+    platform: 'flutter',
+    title: 'MapVina Flutter — Coming Soon',
+    desc: 'Ảnh chụp màn hình Flutter đang được chuẩn bị. Hãy build app theo hướng dẫn trong guides/flutter.md.',
+    repo: 'https://github.com/mapvina/mapvina-document-flutter-github'
   }
 ];
 
