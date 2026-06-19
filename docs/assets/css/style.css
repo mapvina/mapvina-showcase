@@ -185,8 +185,43 @@ footer {
   border-top: 1px solid var(--border);
 }
 
+.placeholder-fallback {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 360px;
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  color: #94a3b8;
+  gap: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.placeholder-fallback svg {
+  opacity: 0.6;
+}
+
+.status-pending {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.status-pending::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #f59e0b;
+  border-radius: 50%;
+  display: inline-block;
+}
+
 @media (max-width: 600px) {
   header h1 { font-size: 1.8rem; }
   .gallery { grid-template-columns: 1fr; padding: 0 12px 32px; }
   .card img { height: 480px; }
+  .placeholder-fallback { height: 280px; }
 }

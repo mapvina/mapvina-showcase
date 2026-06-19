@@ -9,6 +9,20 @@ const screenshots = [
     desc: 'Hiển thị bản đồ cơ bản với style Streets trên Android emulator (Pixel API 33).',
     repo: 'https://github.com/mapvina/mapvina-document-android-github'
   },
+  {
+    file: 'screenshots/android/android-map-full.png',
+    platform: 'android',
+    title: 'MapVina Android — Full Map View',
+    desc: 'Toàn cảnh bản đồ MapVina trên Android với nhiều layer và dữ liệu địa phương.',
+    repo: 'https://github.com/mapvina/mapvina-document-android-github'
+  },
+  {
+    file: 'screenshots/android/android-map-branded.png',
+    platform: 'android',
+    title: 'MapVina Android — Branded Map',
+    desc: 'Bản đồ tùy chỉnh với logo MapVina và branding trên Android.',
+    repo: 'https://github.com/mapvina/mapvina-document-android-github'
+  },
   // iOS
   {
     file: 'screenshots/ios/ios-map-basic.png',
@@ -118,18 +132,22 @@ function renderGallery(filter = 'all') {
 
   gallery.innerHTML = filtered.map(s => {
     const badge = platformLabels[s.platform];
+    const isPlaceholder = s.file.includes('coming-soon');
+    const statusClass = isPlaceholder ? 'status-pending' : 'status';
+    const statusText = isPlaceholder ? 'Đang chuẩn bị' : 'Chạy thành công';
     return `
       <div class="card" data-platform="${s.platform}">
         <img src="${s.file}" alt="${s.title}" loading="lazy"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-        <div style="display:none;align-items:center;justify-content:center;height:200px;background:#f1f5f9;color:#94a3b8;">
-          Screenshot coming soon
+        <div class="placeholder-fallback" style="display:${isPlaceholder ? 'flex' : 'none'};">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+          <span>Screenshot coming soon</span>
         </div>
         <div class="card-body">
           <div class="platform-badge ${badge.class}">${badge.label}</div>
           <div class="card-title">${s.title}</div>
           <div class="card-desc">${s.desc}</div>
-          <div class="status">Chạy thành công</div>
+          <div class="${statusClass}">${statusText}</div>
           <a class="card-link" href="${s.repo}" target="_blank" rel="noopener">View demo repo →</a>
         </div>
       </div>
