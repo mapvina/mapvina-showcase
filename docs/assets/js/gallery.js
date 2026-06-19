@@ -1,128 +1,88 @@
 // MapVina Showcase — Gallery Logic
 
 const screenshots = [
-  // Android
+  // Native SDK
   {
-    file: 'screenshots/android/android-map-basic.png',
+    file: 'screenshots/native/native-android-map.png',
     platform: 'android',
-    title: 'MapVina Android — Basic Map',
-    desc: 'Hiển thị bản đồ cơ bản với style Streets trên Android emulator (Pixel API 33).',
+    title: 'MapVina Native SDK — Android',
+    desc: 'Bản đồ vector từ MapVina Native SDK chạy trên Android emulator (Pixel 9 Pro XL, API 35).',
+    repo: 'https://github.com/mapvina/mapvina-native'
+  },
+  {
+    file: 'screenshots/native/native-ios-map.png',
+    platform: 'ios',
+    title: 'MapVina Native SDK — iOS',
+    desc: 'Bản đồ vector từ MapVina Native SDK chạy trên iOS Simulator (iPhone 17).',
+    repo: 'https://github.com/mapvina/mapvina-native'
+  },
+  // Android Document
+  {
+    file: 'screenshots/android/android-doc-map.png',
+    platform: 'android',
+    title: 'MapVina Android — Document Demo',
+    desc: 'Demo app Android với bản đồ MapVina style trên emulator.',
     repo: 'https://github.com/mapvina/mapvina-document-android-github'
   },
   {
-    file: 'screenshots/android/android-map-full.png',
+    file: 'screenshots/android/android-web-map.png',
     platform: 'android',
-    title: 'MapVina Android — Full Map View',
-    desc: 'Toàn cảnh bản đồ MapVina trên Android với nhiều layer và dữ liệu địa phương.',
+    title: 'MapVina Android — Web Map',
+    desc: 'Bản đồ MapVina hiển thị qua WebView trên Android emulator.',
     repo: 'https://github.com/mapvina/mapvina-document-android-github'
   },
+  // iOS Document
   {
-    file: 'screenshots/android/android-map-branded.png',
+    file: 'screenshots/ios/ios-doc-map.png',
+    platform: 'ios',
+    title: 'MapVina iOS — Document Demo',
+    desc: 'Demo app iOS với bản đồ MapVina style trên Simulator (iPhone 17).',
+    repo: 'https://github.com/mapvina/mapvina-document-ios-github'
+  },
+  {
+    file: 'screenshots/ios/ios-map-native.png',
+    platform: 'ios',
+    title: 'MapVina iOS — Native MapKit',
+    desc: 'Bản đồ hiển thị qua MapKit trên iOS Simulator (iPhone 17).',
+    repo: 'https://github.com/mapvina/mapvina-document-ios-github'
+  },
+  // Flutter
+  {
+    file: 'screenshots/flutter/flutter-android-map.png',
     platform: 'android',
-    title: 'MapVina Android — Branded Map',
-    desc: 'Bản đồ tùy chỉnh với logo MapVina và branding trên Android.',
-    repo: 'https://github.com/mapvina/mapvina-document-android-github'
-  },
-  // iOS
-  {
-    file: 'screenshots/ios/ios-map-basic.png',
-    platform: 'ios',
-    title: 'MapVina iOS — Basic Map',
-    desc: 'Bản đồ cơ bản hiển thị mượt mà trên iOS Simulator (iPhone 17, iOS 26).',
-    repo: 'https://github.com/mapvina/mapvina-document-ios-github'
+    title: 'MapVina Flutter — Android',
+    desc: 'Bản đồ từ Flutter MapVina GL plugin chạy trên Android emulator.',
+    repo: 'https://github.com/mapvina/mapvina-document-flutter-github'
   },
   {
-    file: 'screenshots/ios/ios-map-location.png',
+    file: 'screenshots/flutter/flutter-ios-map.png',
     platform: 'ios',
-    title: 'MapVina iOS — Location & GPS',
-    desc: 'Theo dõi vị trí real-time với GPS marker trên iOS Simulator (iPhone 17).',
-    repo: 'https://github.com/mapvina/mapvina-document-ios-github'
+    title: 'MapVina Flutter — iOS',
+    desc: 'Bản đồ từ Flutter MapVina GL plugin chạy trên iOS Simulator.',
+    repo: 'https://github.com/mapvina/mapvina-document-flutter-github'
   },
-  {
-    file: 'screenshots/ios/ios-map-annotations.png',
-    platform: 'ios',
-    title: 'MapVina iOS — Custom Annotations',
-    desc: 'Hiển thị custom annotations và markers trên bản đồ iOS Simulator (iPhone 17).',
-    repo: 'https://github.com/mapvina/mapvina-document-ios-github'
-  },
-  {
-    file: 'screenshots/ios/ios-map-navigation.png',
-    platform: 'ios',
-    title: 'MapVina iOS — Turn-by-Turn Navigation',
-    desc: 'Điều hướng turn-by-turn với route polyline và instruction panel.',
-    repo: 'https://github.com/mapvina/mapvina-document-ios-github'
-  },
-  {
-    file: 'screenshots/ios/ios-map-full.png',
-    platform: 'ios',
-    title: 'MapVina iOS — Full Map View',
-    desc: 'Toàn cảnh bản đồ MapVina render hoàn chỉnh với nhiều layer.',
-    repo: 'https://github.com/mapvina/mapvina-document-ios-github'
-  },
-  {
-    file: 'screenshots/ios/ios-map-fixed.png',
-    platform: 'ios',
-    title: 'MapVina iOS — Fixed Map Region',
-    desc: 'Bản đồ với region đã cố định, hiển thị địa danh rõ ràng.',
-    repo: 'https://github.com/mapvina/mapvina-document-ios-github'
-  },
-  // React Native (Android emulator — real screenshots)
+  // React Native
   {
     file: 'screenshots/react-native/rn-android-map-basic.png',
     platform: 'react-native',
-    title: 'MapVina React Native — Basic Map',
+    title: 'MapVina React Native — Android',
     desc: 'Bản đồ tương tác trong React Native chạy trên Android emulator (Pixel 9 Pro XL, API 35).',
-    repo: 'https://github.com/mapvina/mapvina-document-reactnative-github'
+    repo: 'https://github.com/mapvina/mapvina-react-native'
   },
   {
-    file: 'screenshots/react-native/rn-android-map-texture.png',
+    file: 'screenshots/react-native/rn-ios-map-basic.png',
     platform: 'react-native',
-    title: 'MapVina React Native — Texture View',
-    desc: 'MapView với androidView="texture" mode hiển thị bản đồ mượt mà trên Android.',
-    repo: 'https://github.com/mapvina/mapvina-document-reactnative-github'
+    title: 'MapVina React Native — iOS',
+    desc: 'Bản đồ tương tác trong React Native chạy trên iOS Simulator (iPhone 17).',
+    repo: 'https://github.com/mapvina/mapvina-react-native'
   },
+  // React Native Document
   {
-    file: 'screenshots/react-native/rn-android-map-camera.png',
+    file: 'screenshots/react-native/rn-ios-doc-map.png',
     platform: 'react-native',
-    title: 'MapVina React Native — Camera FlyTo',
-    desc: 'Camera controls với flyTo animation, zoom và bearing trên bản đồ React Native.',
+    title: 'MapVina React Native Demo — iOS',
+    desc: 'Demo app React Native với bản đồ MapVina trên iOS Simulator.',
     repo: 'https://github.com/mapvina/mapvina-document-reactnative-github'
-  },
-  {
-    file: 'screenshots/react-native/rn-android-map-location.png',
-    platform: 'react-native',
-    title: 'MapVina React Native — User Location',
-    desc: 'Theo dõi vị trí người dùng real-time với location indicator trên Android.',
-    repo: 'https://github.com/mapvina/mapvina-document-reactnative-github'
-  },
-  {
-    file: 'screenshots/react-native/rn-android-map-hillshade.png',
-    platform: 'react-native',
-    title: 'MapVina React Native — Hillshade Layer',
-    desc: 'Hillshade terrain layer (Mapterhorn) hiển thị địa hình 3D trên bản đồ React Native.',
-    repo: 'https://github.com/mapvina/mapvina-document-reactnative-github'
-  },
-  {
-    file: 'screenshots/react-native/rn-android-map-twomaps.png',
-    platform: 'react-native',
-    title: 'MapVina React Native — Two Maps',
-    desc: 'Hiển thị hai bản đồ song song trong cùng một màn hình React Native.',
-    repo: 'https://github.com/mapvina/mapvina-document-reactnative-github'
-  },
-  {
-    file: 'screenshots/react-native/rn-android-map-ornaments.png',
-    platform: 'react-native',
-    title: 'MapVina React Native — Map Ornaments',
-    desc: 'Bản đồ với scale bar, compass, attribution và các UI ornaments tùy chỉnh.',
-    repo: 'https://github.com/mapvina/mapvina-document-reactnative-github'
-  },
-  // Flutter — placeholder
-  {
-    file: 'screenshots/flutter/flutter-map-coming-soon.png',
-    platform: 'flutter',
-    title: 'MapVina Flutter — Coming Soon',
-    desc: 'Ảnh chụp màn hình Flutter đang được chuẩn bị. Hãy build app theo hướng dẫn trong guides/flutter.md.',
-    repo: 'https://github.com/mapvina/mapvina-document-flutter-github'
   }
 ];
 
@@ -130,7 +90,8 @@ const platformLabels = {
   android: { label: 'Android', class: 'badge-android' },
   ios: { label: 'iOS', class: 'badge-ios' },
   flutter: { label: 'Flutter', class: 'badge-flutter' },
-  'react-native': { label: 'React Native', class: 'badge-react-native' }
+  'react-native': { label: 'React Native', class: 'badge-react-native' },
+  native: { label: 'Native SDK', class: 'badge-native' }
 };
 
 function renderGallery(filter = 'all') {
