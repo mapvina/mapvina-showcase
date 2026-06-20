@@ -3,7 +3,7 @@
 const screenshots = [
   // Native SDK
   {
-    file: 'screenshots/native/native-android-map.png',
+    file: 'screenshots/coming-soon.png',
     platform: 'android',
     title: 'MapVina Native SDK — Android',
     desc: 'Bản đồ vector từ MapVina Native SDK chạy trên Android emulator (Pixel 9 Pro XL, API 35).',
@@ -26,7 +26,7 @@ const screenshots = [
   },
   // iOS Document
   {
-    file: 'screenshots/coming-soon.png',
+    file: 'screenshots/ios/ios-document-map.png',
     platform: 'ios',
     title: 'MapVina iOS — Document Demo',
     desc: 'Demo app iOS với bản đồ MapVina style trên Simulator (iPhone 17).',
@@ -34,7 +34,7 @@ const screenshots = [
   },
   // Flutter
   {
-    file: 'screenshots/flutter/flutter-android-map.png',
+    file: 'screenshots/coming-soon.png',
     platform: 'android',
     title: 'MapVina Flutter — Android',
     desc: 'Bản đồ từ Flutter MapVina GL plugin chạy trên Android emulator.',
@@ -56,7 +56,7 @@ const screenshots = [
     repo: 'https://github.com/mapvina/mapvina-react-native'
   },
   {
-    file: 'screenshots/react-native/rn-android-camera.png',
+    file: 'screenshots/coming-soon.png',
     platform: 'react-native',
     title: 'MapVina React Native — Android (Camera)',
     desc: 'Camera example trong React Native chạy trên Android emulator (Pixel 9 Pro XL, API 35).',
