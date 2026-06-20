@@ -3,7 +3,7 @@
 const screenshots = [
   // Native SDK
   {
-    file: 'screenshots/coming-soon.png',
+    file: 'screenshots/native/native-android-map.png',
     platform: 'android',
     title: 'MapVina Native SDK — Android',
     desc: 'Bản đồ vector từ MapVina Native SDK chạy trên Android emulator (Pixel 9 Pro XL, API 35).',
@@ -34,7 +34,7 @@ const screenshots = [
   },
   // Flutter
   {
-    file: 'screenshots/coming-soon.png',
+    file: 'screenshots/flutter/flutter-android-map.png',
     platform: 'android',
     title: 'MapVina Flutter — Android',
     desc: 'Bản đồ từ Flutter MapVina GL plugin chạy trên Android emulator.',
