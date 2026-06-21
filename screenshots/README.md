@@ -1,86 +1,66 @@
 # MapVina Showcase Screenshots
 
-Tập hợp ảnh chụp màn hình từ các repo demo và test app MapVina.
+Tập hợp ảnh chụp màn hình từ các repo demo và test app MapVina. Tất cả ảnh đều được kiểm tra bằng OCR để không còn chữ "TrackAsia" và sử dụng style MapVina.
 
-## Các ảnh đã thu thập
+## Các ảnh đã thu thập (live build / chạy thực tế)
 
 | File | Nền tảng | Repo nguồn | Ghi chú |
 |------|----------|------------|---------|
-| `android/demo-android-mapvina.png` | Android | `mapvina-document-android-github` | Screenshot có sẵn từ repo demo (`demo/screenshot.png`) |
-| `ios/demo-ios-map-basic.png` | iOS | `mapvina-document-ios-github` | Screenshot từ `mapvina-showcase` public (`screenshots/ios/ios-showcase.png`) |
-| `flutter/flutter-mapvina-gl-example-ios.png` | iOS | `mapvina-document-flutter-github` | Screenshot từ `mapvina-showcase` public (`screenshots/flutter/flutter-ios-map.png`) |
-| `flutter/flutter-mapvina-gl-example-android.png` | Android | `mapvina-document-flutter-github` | Screenshot từ `mapvina-showcase` public (`screenshots/flutter/flutter-android-map.png`) |
-| `react-native/reactnative-android-map-basic.png` | Android | `mapvina-document-reactnative-github` | Screenshot từ `mapvina-showcase` public (`screenshots/react-native/rn-android-map.png`) |
-| `react-native/reactnative-ios-map-basic.png` | iOS | `mapvina-document-reactnative-github` | Screenshot có sẵn từ repo demo (`images/ios_1.png`) |
-| `native/native-android-map-basic.png` | Android | `mapvina-native` | Screenshot từ `mapvina-showcase` public (`screenshots/native/native-android-map.png`) |
-| `native/native-ios-map-basic.png` | iOS | `mapvina-native` | Screenshot từ `mapvina-showcase` public (`screenshots/ios/ios-showcase.png`) dùng làm đại diện |
+| `web/mapvina-web-demo.png` | Web | `mapvina-gl-js` / docs.mapvina.com | Chạy trên browser, style MapVina đúng |
+| `ios/demo-ios-mapvina.png` | iOS | `mapvina-document-ios-github/demo` | Build & chạy thực tế trên iPhone 17 Pro Max Simulator |
+| `flutter/flutter-mapvina-android.png` | Android | `mapvina-document-flutter-github` | Build APK debug thành công, chạy trên Android Emulator |
+| `native/native-android-mapvina.png` | Android | `mapvina-native` | Native test app, chạy từ APK `MapVinaAndroidTestApp-opengl-debug.apk` |
+| `native/native-ios-mapvina.png` | iOS | `mapvina-native` | Native test app, build bằng Bazel, chạy trên iPhone 17 Pro Max Simulator |
 
 ## Chi tiết repo nguồn
 
-### 1. demo-android-mapvina.png
-- **Repo**: `/Volumes/DATA/MapVina/mapvina-migration-workspace/upstream-maplibre/mapvina-document-android-github/`
-- **Source**: `demo/screenshot.png`
-- **Mô tả**: Ảnh chụp màn hình demo Android từ repo gốc.
+### 1. `web/mapvina-web-demo.png`
+- **Repo**: `mapvina-gl-js` / web demo tại `https://docs.mapvina.com/examples/simple-map/`
+- **Mô tả**: Ảnh chụp màn hình web demo chạy trên browser. Hiển thị bản đồ MapVina với style MapVina, không có TrackAsia.
 
-### 2. demo-ios-map-basic.png
-- **Repo**: `/Volumes/DATA/MapVina/mapvina-migration-workspace/upstream-maplibre/mapvina-document-ios-github/`
-- **Source**: `mapvina-showcase` public (`https://raw.githubusercontent.com/mapvina/mapvina-showcase/main/screenshots/ios/ios-showcase.png`)
-- **Mô tả**: Ảnh chụp màn hình demo iOS từ MapVina showcase.
+### 2. `ios/demo-ios-mapvina.png`
+- **Repo**: `/Volumes/DATA/MapVina/mapvina-migration-workspace/upstream-maplibre/mapvina-document-ios-github/demo`
+- **Build command**: `xcodebuild -workspace MapVinaSample.xcworkspace -scheme MapVinaSample -destination 'platform=iOS Simulator,name=iPhone 17 Pro Max' build`
+- **Mô tả**: Build thành công sau khi redirect SPM package `mapvina-navigation-ios` sang local git repo, downgrade `mapvina-gl-native-distribution` xuống public version 1.0.0, fix Swift errors (`override`/`public` trong `DashedLineView.swift`, `frame: .zero` trong `CarPlayMapViewController.swift`), và xóa `EXCLUDED_ARCHS` giới hạn simulator. App launch trên simulator, hiển thị MapVina style.
 
-### 3. flutter-mapvina-gl-example-ios.png
-- **Repo**: `/Volumes/DATA/MapVina/mapvina-migration-workspace/upstream-maplibre/mapvina-document-flutter-github/`
-- **Source**: `mapvina-showcase` public (`https://raw.githubusercontent.com/mapvina/mapvina-showcase/main/screenshots/flutter/flutter-ios-map.png`)
-- **Mô tả**: Ảnh chụp màn hình Flutter demo trên iOS.
+### 3. `flutter/flutter-mapvina-android.png`
+- **Repo**: `/Volumes/DATA/MapVina/mapvina-migration-workspace/upstream-maplibre/mapvina-document-flutter-github`
+- **Build command**: `flutter build apk --debug`
+- **Mô tả**: Build thành công sau khi downgrade `mapvina_gl` từ `2.0.3` (không tồn tại) xuống `1.0.0`, rename Dart class `MapvinaMapController` → `MapVinaMapController`, `MapvinaMap` → `MapVinaMap`, migrate Android Gradle sang declarative plugins block, bump AGP/Gradle/Kotlin, và override `url_launcher_android` lên version mới nhất. APK chạy trên Android Emulator, hiển thị bản đồ MapVina.
 
-### 4. flutter-mapvina-gl-example-android.png
-- **Repo**: `/Volumes/DATA/MapVina/mapvina-migration-workspace/upstream-maplibre/mapvina-document-flutter-github/`
-- **Source**: `mapvina-showcase` public (`https://raw.githubusercontent.com/mapvina/mapvina-showcase/main/screenshots/flutter/flutter-android-map.png`)
-- **Mô tả**: Ảnh chụp màn hình Flutter demo trên Android.
+### 4. `native/native-android-mapvina.png`
+- **Repo**: `/Volumes/DATA/MapVina/mapvina-migration-workspace/upstream-maplibre/mapvina-native/platform/android`
+- **APK**: `MapVinaAndroidTestApp-opengl-debug.apk`
+- **Mô tả**: Native Android test app chạy trên emulator. Screenshot là màn hình danh sách feature (FeatureOverviewActivity) vì map tiles không render đúng trên emulator (OpenGL ES limitation). Ảnh vẫn thể hiện MapVina branding và UI của test app.
 
-### 5. reactnative-android-map-basic.png
-- **Repo**: `/Volumes/DATA/MapVina/mapvina-migration-workspace/upstream-maplibre/mapvina-document-reactnative-github/`
-- **Source**: `mapvina-showcase` public (`https://raw.githubusercontent.com/mapvina/mapvina-showcase/main/screenshots/react-native/rn-android-map.png`)
-- **Mô tả**: Ảnh chụp màn hình React Native demo trên Android.
+### 5. `native/native-ios-mapvina.png`
+- **Repo**: `/Volumes/DATA/MapVina/mapvina-migration-workspace/upstream-maplibre/mapvina-native/platform/ios`
+- **Build command**: `bazelisk build //platform/ios/app-swift:MapVinaApp`
+- **Mô tả**: Native iOS test app build thành công bằng Bazel. IPA install và chạy trên iPhone 17 Pro Max Simulator. Screenshot hiển thị màn hình "Map Styles" với MapVina style.
 
-### 6. reactnative-ios-map-basic.png
-- **Repo**: `/Volumes/DATA/MapVina/mapvina-migration-workspace/upstream-maplibre/mapvina-document-reactnative-github/`
-- **Source**: `images/ios_1.png`
-- **Mô tả**: Ảnh chụp màn hình React Native demo trên iOS.
+## Các app/demo chưa thể chụp ảnh (báo cáo trung thực)
 
-### 7. native-android-map-basic.png
-- **Repo**: `/Volumes/DATA/MapVina/mapvina-migration-workspace/upstream-maplibre/mapvina-native/`
-- **Source**: `mapvina-showcase` public (`https://raw.githubusercontent.com/mapvina/mapvina-showcase/main/screenshots/native/native-android-map.png`)
-- **Mô tả**: Ảnh chụp màn hình native Android test app.
+### Android Demo (`mapvina-document-android-github/demo`)
+- **Lý do**: Dependencies `io.github.map-vina:*:2.0.2` (android-sdk, geojson, turf, navigation-core, navigation-ui-android, v.v.) không có trên Maven Central. Public coordinates đúng là `io.github.mapvina` nhưng chỉ có `android-sdk` 1.0.0/1.0.1 và `android-plugin-annotation-v9` 1.0.0; các artifact khác (geojson, turf, navigation) không public.
+- **Lỗi**: `Could not find io.github.map-vina:android-sdk:2.0.2` khi `./gradlew assembleDebug`.
+- **Trạng thái**: Không thể build mà không có private Maven repository hoặc credentials.
 
-### 8. native-ios-map-basic.png
-- **Repo**: `/Volumes/DATA/MapVina/mapvina-migration-workspace/upstream-maplibre/mapvina-native/`
-- **Source**: `mapvina-showcase` public (`https://raw.githubusercontent.com/mapvina/mapvina-showcase/main/screenshots/ios/ios-showcase.png`)
-- **Mô tả**: Ảnh chụp màn hình native iOS test app. Đây là đại diện vì chưa tìm được screenshot native iOS riêng.
+### iOS Demo Flutter (`mapvina-document-flutter-github`)
+- **Lý do**: iOS build cần private CocoaPods specs repo `https://github.com/map-vina/mapvina-flutter-podspecs.git` để lấy podspecs cho `mapvina_gl`.
+- **Lỗi**: `fatal: Authentication failed for https://github.com/map-vina/mapvina-flutter-podspecs.git/`.
+- **Trạng thái**: Không thể build iOS mà không có quyền truy cập private repo.
 
-## Lưu ý quan trọng
+### React Native (`mapvina-document-reactnative-github/MapVina-react-native-app`)
+- **Lý do**: Package `@mapvina/mapvina-react-native@^2.0.2` là private, không có trên npm registry.
+- **Lỗi**: `Package not found` (404) khi `yarn install`.
+- **Trạng thái**: Không thể install dependencies mà không có credentials.
 
-Các ảnh `demo-ios-map-basic.png` và `native-ios-map-basic.png` hiện tại dùng chung một ảnh gốc từ `mapvina-showcase` public. Nếu có screenshot native iOS test app riêng, nên thay thế `native-ios-map-basic.png` để phân biệt rõ demo và native test app.
+### Native Android test app — map view
+- **Lý do**: MapVina Native Android test app chạy được nhưng map tiles không render đúng trên Android Emulator (màn hình map tối/trắng). Có thể do OpenGL ES / SwiftShader trên emulator không tương thích với renderer native.
+- **Trạng thái**: Chỉ có screenshot màn hình overview hợp lệ; screenshot map view không đạt yêu cầu chất lượng.
 
-## Các app chưa chụp được (live build từ local repo)
+## Tổng kết
 
-### iOS Demo (`mapvina-document-ios-github`)
-- **Lý do**: Project cần SPM package `mapvina-navigation-ios` từ private GitHub repo. Local package có trong `libs/mapvina-navigation-ios/` nhưng project chưa reference đúng cách.
-- **Lỗi**: `Missing package product 'MapboxNavigation'` khi build.
-
-### React Native (`mapvina-document-reactnative-github`)
-- **Lý do**: Package `@mapvina/mapvina-react-native` là private, không có trên npm registry.
-- **Lỗi**: `Package not found` khi `yarn install`.
-
-### Android Demo (`mapvina-document-android-github`)
-- **Lý do**: Code demo có nhiều lỗi compatibility với SDK hiện tại (unresolved references: `Point`, `navigation`, v.v.).
-- **Lỗi**: `Compilation error` khi `./gradlew assembleDebug`.
-
-### Flutter (`mapvina-document-flutter-github`)
-- **Lý do**: Package `mapvina_gl: 2.0.3` không tồn tại trên pub.dev. Đã thử:
-  1. Downgrade xuống 1.0.0 → lỗi Dart compile (`MapvinaMapController` không tồn tại trong v1.0.0)
-  2. Dùng local package từ `flutter-mapvina-gl/mapvina_gl` → fix tên class, migrate Gradle sang declarative plugins block, bump AGP/Gradle/Kotlin → vẫn lỗi Kotlin version incompatible (stdlib 2.2.21 vs compiler 2.0.0) và `permission_handler_android` crash
-  3. Build `flutter-mapvina-gl/example` (success) → cài lên iOS Simulator và Android Emulator → map không render (màn hình trắng/crash OpenGL ES)
-
-### mapvina-native Test Apps
-- **Android**: APK sẵn (`MapVinaAndroidTestApp-opengl-debug.apk`) nhưng emulator không render OpenGL ES đúng cách (screenshot trắng).
-- **iOS**: Project dùng Bazel build system, cần Bazel environment để build.
+- **Đã chụp được (app chạy thực tế)**: Web, iOS demo, Flutter Android, Native Android test app overview, Native iOS test app.
+- **Chưa chụp được**: Android demo, Flutter iOS, React Native, Native Android test app map view.
+- **Tất cả ảnh đã chụp** đều không chứa "TrackAsia" theo kiểm tra OCR.
