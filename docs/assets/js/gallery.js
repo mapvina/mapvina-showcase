@@ -47,20 +47,37 @@ const screenshots = [
     desc: 'Bản đồ từ Flutter MapVina GL plugin chạy trên iOS Simulator.',
     repo: 'https://github.com/mapvina/mapvina-document-flutter-github'
   },
-  // React Native
+  // React Native — Sample app (ShowMap example)
   {
-    file: 'screenshots/react-native/rn-android-map.png',
+    file: 'screenshots/react-native/mapvina-react-native-android.png',
     platform: 'react-native',
-    title: 'MapVina React Native — Android',
-    desc: 'Bản đồ tương tác trong React Native chạy trên Android emulator (Pixel 9 Pro XL, API 35).',
-    repo: 'https://github.com/mapvina/mapvina-react-native'
+    title: 'MapVina React Native — Sample: Show Map',
+    desc: 'Sample app ShowMap example với MapVina streets style chạy trên Android emulator (Pixel 7, API 36).',
+    repo: 'https://github.com/mapvina/mapvina-document-reactnative-github'
   },
+  // React Native — Sample app (Examples list)
   {
-    file: 'screenshots/coming-soon.png',
+    file: 'screenshots/react-native/mapvina-react-native-expo-android.png',
     platform: 'react-native',
-    title: 'MapVina React Native — Android (Camera)',
-    desc: 'Camera example trong React Native chạy trên Android emulator (Pixel 9 Pro XL, API 35).',
-    repo: 'https://github.com/mapvina/mapvina-react-native'
+    title: 'MapVina React Native — Sample: Examples List',
+    desc: 'Danh sách examples của sample app React Native chạy trên Android emulator (Pixel 7, API 36).',
+    repo: 'https://github.com/mapvina/mapvina-document-reactnative-github'
+  },
+  // React Native — React Native app
+  {
+    file: 'screenshots/react-native/mapvina-react-native-app-android.png',
+    platform: 'react-native',
+    title: 'MapVina React Native — RN App',
+    desc: 'MapVina-react-native-app với bản đồ MapVina style, user location, header & footer chạy trên Android emulator (Pixel 7, API 36).',
+    repo: 'https://github.com/mapvina/mapvina-document-reactnative-github'
+  },
+  // React Native — Expo app
+  {
+    file: 'screenshots/react-native/mapvina-react-native-expo-app-android.png',
+    platform: 'react-native',
+    title: 'MapVina React Native — Expo App',
+    desc: 'MapVina-expo-app với bản đồ MapVina style, user location, header & footer chạy trên Android emulator (Pixel 7, API 36).',
+    repo: 'https://github.com/mapvina/mapvina-document-reactnative-github'
   },
   {
     file: 'screenshots/coming-soon.png',
@@ -68,14 +85,6 @@ const screenshots = [
     title: 'MapVina React Native — iOS',
     desc: 'Bản đồ tương tác trong React Native chạy trên iOS Simulator (iPhone 17).',
     repo: 'https://github.com/mapvina/mapvina-react-native'
-  },
-  // React Native Document
-  {
-    file: 'screenshots/coming-soon.png',
-    platform: 'react-native',
-    title: 'MapVina React Native Demo — iOS',
-    desc: 'Demo app React Native với bản đồ MapVina trên iOS Simulator.',
-    repo: 'https://github.com/mapvina/mapvina-document-reactnative-github'
   }
 ];
 
