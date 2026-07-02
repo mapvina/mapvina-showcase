@@ -25,10 +25,12 @@ pod install
 ```bash
 # Dùng xcrun simctl
 xcrun simctl boot "iPhone 15 Pro"
-xcrun simctl screenshot "iPhone 15 Pro" screenshots/ios/ios-map-basic.png
+xcrun simctl screenshot "iPhone 15 Pro" screenshots/ios/mapvina-document-ios.png
 
 # Hoặc dùng Xcode: Debug → View Debugging → Take Screenshot of [Device]
 ```
+
+Ảnh đã verify hiện tại: `screenshots/ios/mapvina-document-ios.png` — chạy thực tế trên iOS Simulator, render đúng style MapVina (`verification/check_map.py` = RENDERED).
 
 ## Các màn hình cần chụp
 1. Basic Map với style mặc định

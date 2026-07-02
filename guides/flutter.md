@@ -26,13 +26,15 @@ flutter run -d "iPhone 15 Pro"
 ```bash
 # Android (qua adb)
 adb shell screencap -p /sdcard/flutter_map.png
-adb pull /sdcard/flutter_map.png screenshots/flutter/flutter-map-search.png
+adb pull /sdcard/flutter_map.png screenshots/flutter/mapvina-document-flutter-android.png
 
 # iOS (qua simctl)
-xcrun simctl screenshot "iPhone 15 Pro" screenshots/flutter/flutter-map-search.png
+xcrun simctl screenshot "iPhone 15 Pro" screenshots/flutter/mapvina-document-flutter-ios.png
 
 # Hoặc dùng IDE: Device Manager → Take Screenshot
 ```
+
+Ảnh đã verify hiện tại: `screenshots/flutter/mapvina-document-flutter-android.png` (Android Emulator) và `screenshots/flutter/mapvina-document-flutter-ios.png` (iOS Simulator) — chạy thực tế, render đúng style MapVina (`verification/check_map.py` = RENDERED).
 
 ## Các màn hình cần chụp
 1. Basic Map display

@@ -24,10 +24,12 @@ cd mapvina-document-android-github/demo
 ```bash
 # Chụp toàn màn hình
 adb shell screencap -p /sdcard/screen.png
-adb pull /sdcard/screen.png screenshots/android/android-map-basic.png
+adb pull /sdcard/screen.png screenshots/android/mapvina-document-android.png
 
 # Hoặc dùng Android Studio: Logcat panel → Screen Capture icon
 ```
+
+Ảnh đã verify hiện tại: `screenshots/android/mapvina-document-android.png` — `./gradlew assembleDebug` + chạy thực tế trên Android Emulator, render đúng style MapVina (`verification/check_map.py` = RENDERED).
 
 ## Các màn hình cần chụp
 1. Basic Map (style Streets)
