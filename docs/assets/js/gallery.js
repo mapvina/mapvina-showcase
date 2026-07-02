@@ -10,10 +10,10 @@ const screenshots = [
     repo: 'https://github.com/mapvina/mapvina-native'
   },
   {
-    file: 'screenshots/coming-soon.png',
+    file: 'screenshots/native/native-ios-map.png',
     platform: 'ios',
     title: 'MapVina Native SDK — iOS',
-    desc: 'Bản đồ vector từ MapVina Native SDK chạy trên iOS Simulator (iPhone 17).',
+    desc: 'Bản đồ vector từ MapVina Native SDK (SimpleMap example, MapVina Streets style) chạy trên iOS Simulator (iPhone 16, iOS 18.6).',
     repo: 'https://github.com/mapvina/mapvina-native'
   },
   // Android Document
