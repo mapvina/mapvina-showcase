@@ -67,7 +67,7 @@ Tập hợp ảnh chụp màn hình từ các repo demo và test app MapVina. T�
 | Android | `mapvina-document-android-github/demo` | Android Emulator | ✅ Build + chạy + render MapVina |
 
 ### Android Demo (`mapvina-document-android-github/demo`) — ĐÃ KHẮC PHỤC
-- **Đính chính**: Ghi chú cũ nói cần private Maven repo cho `io.github.map-vina:*:2.0.2` là **không đúng**. Public coordinates thực tế là `io.github.mapvina:android-sdk:1.0.1` và **resolve thành công** trên Maven Central.
+- **Đính chính**: Ghi chú cũ nói cần private Maven repo cho `io.github.map-vina:*:2.0.2` là **không đúng**. Public coordinates thực tế là `io.github.mapvina:android-sdk:1.0.2` và **resolve thành công** trên Maven Central.
 - **Fix đã áp dụng**: Sửa crash do thiếu API key (missing-API-key crash) và sửa chuỗi branding "Map-Vina" còn sót lại.
 - **Trạng thái**: `./gradlew assembleDebug` build thành công; `adb install` + launch trên Android Emulator; app render đúng style MapVina, không có branding TrackAsia.
 
@@ -78,19 +78,19 @@ Tập hợp ảnh chụp màn hình từ các repo demo và test app MapVina. T�
 
 ### React Native — Sample app (`mapvina-document-reactnative-github/sample`)
 - **Repo**: `/Volumes/DATA/MapVina/mapvina-migration-workspace/upstream-maplibre/mapvina-document-reactnative-github/sample`
-- **Package**: `@mapvina-com/mapvina-react-native@^1.0.1` (public trên npm)
+- **Package**: `@mapvina-com/mapvina-react-native@^1.0.2` (public trên npm)
 - **Mô tả**: Sample app build và chạy thành công trên cả iOS Simulator (iPhone 16, iOS 18.6) và Android Emulator (Pixel 7, API 36). Screenshot `mapvina-react-native-android.png` hiển thị ShowMap example với bản đồ MapVina render đúng style streets. Screenshot `mapvina-react-native-expo-android.png` hiển thị danh sách examples. Screenshot `mapvina-react-native-sample-ios.png` hiển thị MapPage với bản đồ MapVina và markers trên iOS. Screenshot `mapvina-react-native-sample-android.png` hiển thị MapPage với bản đồ MapVina và markers trên Android.
 - **Fixes**: Thay thế `MapView`→`Map`, `MapViewRef`→`MapRef`, `styleURL`→`mapStyle` trong toàn bộ sample examples. Thêm `MAPVINA_DEMO_STYLE` constant với MapVina style URL. Sửa import `requestAndroidLocationPermissions` từ SDK sang inline `PermissionsAndroid`.
 
 ### React Native — RN app (`mapvina-document-reactnative-github/MapVina-react-native-app`)
 - **Repo**: `/Volumes/DATA/MapVina/mapvina-migration-workspace/upstream-maplibre/mapvina-document-reactnative-github/MapVina-react-native-app`
-- **Package**: `@mapvina-com/mapvina-react-native@^1.0.1` (public trên npm)
+- **Package**: `@mapvina-com/mapvina-react-native@^1.0.2` (public trên npm)
 - **Mô tả**: React Native app build và chạy thành công trên cả iOS Simulator (iPhone 16, iOS 18.6) và Android Emulator (Pixel 7, API 36). Screenshot `mapvina-react-native-app-ios.png` hiển thị bản đồ MapVina style với user location, header "MapVina Map Demo" và footer trên iOS. Screenshot `mapvina-react-native-app-android.png` hiển thị tương tự trên Android.
 - **Fixes**: Rebuild native binary với React Native 0.81.5 để fix version mismatch giữa JS và native code. Sửa fallback centerCoordinate trong MapVinaMapView.tsx từ tọa độ sai sang TP.HCM [106.6297, 10.8231].
 
 ### React Native — Expo app (`mapvina-document-reactnative-github/MapVina-expo-app`)
 - **Repo**: `/Volumes/DATA/MapVina/mapvina-migration-workspace/upstream-maplibre/mapvina-document-reactnative-github/MapVina-expo-app`
-- **Package**: `@mapvina-com/mapvina-react-native@^1.0.1` (public trên npm)
+- **Package**: `@mapvina-com/mapvina-react-native@^1.0.2` (public trên npm)
 - **Mô tả**: Expo app build và chạy thành công trên cả iOS Simulator (iPhone 16, iOS 18.6) và Android Emulator (Pixel 7, API 36). Screenshot `mapvina-react-native-expo-app-ios.png` hiển thị bản đồ MapVina style với user location, header "MapVina Map Demo" và footer trên iOS. Screenshot `mapvina-react-native-expo-app-android.png` hiển thị tương tự trên Android.
 - **Fixes**: Install `react-native-gesture-handler` để fix missing `RNGestureHandlerModule` native module. Rebuild native binary. Thêm Kotlin stdlib version forcing trong build.gradle để fix Kotlin compiler error với MapVina SDK trên Android. Cập nhật README.md bỏ tham chiếu `MapVinaGL.setAccessToken(null)` không tồn tại.
 
